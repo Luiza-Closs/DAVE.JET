@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            background-color: #071030;
+            font-family: Arial;
+        }
+        #card{
+            display: flex;
+            justify-content: center;
+            transform-style: preserve-3d;
+            transition: all .9s;
+        }
+        .face{
+            width: 175vh;
+            height: 45vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+        }
+        .btn{
+            font-size: 30px;
+            line-height: 60px;
+            width: 50%;
+            border: solid 1px white;
+            border-radius: 50px;
+            text-align: center;
+            color: white;
+            left: 241px;
+            display: block;
+            margin: auto;
+            background-color: transparent;
+        }
+        .butn{
+            font-size: 2.5vw;
+            height: 4vw;
+            border-radius: 50px;
+            text-align: center;
+            left: 241px;
+            display: block;
+            margin: auto;
+        }
+        .butn-log{
+            background-color: #F5A521;
+            border: solid 1px #F5A521;
+            color: #f2f2f2;
+            width: 50%;
+        }
+        .butn-sing{
+            background-color: #2652FF;
+            border: solid 1px #2652FF;
+            color: #f2f2f2;
+            width: 70%;
+        }
+        #msg-log{
+            background-color: #2652FF;
+            width: 50%;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+        #form-log{
+            background-color: #f2f2f2;
+            width: 50%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        #login-form{
+            display: flex;
+            justify-content: center;
+        }
+        #singin-form{
+            display: flex;
+            justify-content: center;
+        }
+        #login{
+            background: palevioletred;
+            transform: rotateY(180deg);
+        }
+        .btn-log:hover{
+            background-color: #f2f2f2;
+            color: #2652FF;
+        }
+        .ttl{
+            font-size: 6vh;
+        }
+        .txt{
+            width: 90%;
+            font-weight: 400;
+            line-height: 84px;
+            text-align: center;
+            color: #FFFFFF;
+            margin: auto;
+        }
+        .input{
+            width: 50vh;
+            height: 2vw;
+            border-radius: 50vh;
+            padding-left: 1vw;
+        }
+        .input-log{
+            border: #F5A521 solid 0.15rem;
+            outline:#F5A521;
+        }
+        .input-sing{
+            border: #2652FF solid 0.15rem;
+        }
+        .text-log{
+            text-align: center;
+            color: #F5A521;
+        }
+        .text-log h1{
+            margin-block-start: 0;
+            margin-block-end: 1.5vh;
+        }
+        .text-sing{
+            text-align: center;
+            color: #2652FF;
+        }
+        .text-sing h1{
+            margin-block-start: 0;
+            margin-block-end: 1.5vh;
+        }
+        .txt h1{
+            margin-block-end: 0;
+            margin-block-start: 8vw;
+        }
+        p{
+            margin-block-start: 0;
+            margin-block-end: 1vw;
+        }
+        .msg{
+            font-size: 27px;
+        }
+        #singin{
+            background: paleturquoise;
+            backface-visibility: hidden;
+        }
+        #form-sing{
+            background: #f2f2f2;
+            width: 50%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        #msg-sing{
+            background: #F5A521;
+            width: 50%;
+            height: 100%;
+        }
+        .btn-sing:hover{
+            background: #f2f2f2;
+            color: #F5A521;
+        }
+        .flip{
+          transform: rotateY(180deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="flip" id="card">
+        <div class="face" id="login">
+            <div id="msg-log">
+                <br>
+                <div class="txt ttl">
+                    <h1 >Que bom te ter de volta!</h1>
+                </div>
+                <div class="txt msg">
+                    <p>Não tem uma conta conosco?</p>
+                </div>
+                <input type="button" class="btn btn-log" value="Criar uma conta">
+            </div>
+            <div id="form-log">
+                <div class="ttl text-log">
+                    <h1 >Login</h1>
+                </div>
+                <div id="login-form">
+                    <form>
+                        <label class="msg text-log" for="email">Email:</label><br>
+		                <input class="input input-log" type="text" id="email" name="email"><br>
+		                <label class="msg text-log" for="password">Senha:</label><br>
+		                <input class="input input-log" type="password" id="password" name="password"><br><br>
+		                <input class="butn butn-log" type="submit" value="Entrar">
+                    </form>
+                </div>   
+            </div>
+        </div>
+        <div class="face" id="singin">
+            <div id="form-sing">
+                <div class="text-sing ttl">
+                    <h1>Sing In</h1>
+                </div>
+                <div id="singin-form">
+                    <form>
+                        <label class="text-sing msg" for="turma">Turma:</label><br>
+                        <input class="input input-sing" type="text" id="turma" name="turma"><br>
+                        <label class="text-sing msg" for="professor">Nome do(a) Professor(a):</label><br>
+                        <input class="input input-sing" type="text" id="professor" name="professor"><br>
+                        <label class="text-sing msg" for="quantidade-alunos">Quantidade de Alunos:</label><br>
+                        <input class="input input-sing" type="number" id="quantidade-alunos" name="quantidade-alunos"><br>
+                        <label class="text-sing msg" for="senha">Senha:</label><br>
+                        <input class="input input-sing" type="password" id="senha" name="senha"><br>
+                        <label class="text-sing msg" for="verificacao-senha">Verificação da Senha:</label><br>
+                        <input class="input input-sing" type="password" id="verificacao-senha" name="verificacao-senha"><br>
+                        <br>
+                        <button class="butn butn-sing" type="submit">Cadastrar</button>
+                    </form>
+                </div>
+            </div>
+            <div id="msg-sing">
+                <div class="txt ttl">
+                    <h1>Bem vindo(a) ao nosso site!</h1>
+                </div>
+                <div class="txt msg">
+                    <p>Já possui uma conta?</p>
+                </div>
+                <input type="button" class="btn btn-sing" value="Entrar">
+            </div>
+        </div>
+    </div>
+    <script>
+        //Para fazer a tela virar
+        const card = document.querySelector("#card");
+        const buttonS = document.querySelector(".btn-sing")
+        const buttonL = document.querySelector(".btn-log")
+        buttonS.addEventListener("click",(e)=>{
+            card.classList.toggle("flip")
+        })
+        buttonL.addEventListener("click",(e)=>{
+            card.classList.toggle("flip")
+        })
+    </script>
+</body>
+</html>
