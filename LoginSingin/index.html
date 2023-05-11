@@ -25,7 +25,7 @@
                     <h1 >Login</h1>
                 </div>
                 <div id="login-form">
-                    <form>
+                    <form id="logform">
                         <label class="msg text-log" for="email">Email:</label><br>
 		                <input class="input input-log" type="text" id="email" name="email"><br>
 		                <label class="msg text-log" for="password">Senha:</label><br>
@@ -68,17 +68,6 @@
             </div>
         </div>
     </div>
-    <script>
-        //Para fazer a tela virar
-        const card = document.querySelector("#card");
-        const buttonS = document.querySelector(".btn-sing")
-        const buttonL = document.querySelector(".btn-log")
-        buttonS.addEventListener("click",(e)=>{
-            card.classList.toggle("flip")
-        })
-        buttonL.addEventListener("click",(e)=>{
-            card.classList.toggle("flip")
-        })
-    </script>
+    <script src="./script.js"></script>
 </body>
 </html>
