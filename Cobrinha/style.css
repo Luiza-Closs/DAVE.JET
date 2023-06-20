@@ -1,0 +1,47 @@
+body {
+    width: 100vw;
+    height: 100vh;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    margin: 0;
+  
+    background-color: #ccc;
+  }
+  
+  #game-board {
+    border: 1vmin hsl(0, 0%, 10%) solid;
+    width: 80vmin;
+    height: 80vmin;
+    display: grid;
+    grid-template-rows: repeat(10, auto);
+    grid-template-columns: repeat(10, auto);
+  }
+  
+  #game-board > div:not(.snake):not(.food):nth-child(odd) {
+    background-color: hsl(0, 0%, 10%);
+  }
+  
+  #game-board > div:not(.snake):not(.food):nth-child(even) {
+    background-color: hsl(0, 0%, 20%);
+  }
+  
+  
+  
+  .snake {
+    background-color: #6fc355;
+  }
+  
+  .food {
+    background-color: #d84242;
+  }
+  .snake-head {
+    background-image: url('../Dave-Img/DaveCorrendo.gif');
+    background-size: cover;
+    background-position: center center;
+    width: 110%;
+    height: 110%;
+    margin: -5%;
+  }
