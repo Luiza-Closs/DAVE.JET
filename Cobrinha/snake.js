@@ -41,6 +41,7 @@ export function draw(gameBoard) {
     })
 }
 
+
 export function expandSnake(amount) {
     newSegments += amount
 }

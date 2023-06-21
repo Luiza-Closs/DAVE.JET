@@ -4,44 +4,38 @@ body {
   
     display: flex;
     justify-content: center;
-    align-items: center;
+
   
     margin: 0;
   
-    background-color: #ccc;
+    background-color: #2D328E;
   }
   
   #game-board {
-    border: 1vmin hsl(0, 0%, 10%) solid;
-    width: 80vmin;
-    height: 80vmin;
+    border: 1vmin #4B220C solid;
+    border-radius: 3vh;
+    margin-left: 3vw;
+    background-image: url('../Dave-Img/Frame\ 3.png');
+    background-size: cover;
+    background-position: center center;
+    width: 70vmin;
+    height: 70vmin;
     display: grid;
     grid-template-rows: repeat(10, auto);
     grid-template-columns: repeat(10, auto);
   }
-  
-  #game-board > div:not(.snake):not(.food):nth-child(odd) {
-    background-color: hsl(0, 0%, 10%);
-  }
-  
-  #game-board > div:not(.snake):not(.food):nth-child(even) {
-    background-color: hsl(0, 0%, 20%);
-  }
-  
-  
-  
   .snake {
-    background-color: #6fc355;
+    background-color: #C20029;
   }
   
   .food {
     background-color: #d84242;
   }
   .snake-head {
-    background-image: url('../Dave-Img/DaveCorrendo.gif');
+    background-image: url('../Dave-Img/picasion.com_09def0a4733e3d6d4b3a184210e6ce68.gif');
     background-size: cover;
     background-position: center center;
-    width: 110%;
-    height: 110%;
-    margin: -5%;
+    width: 200%;
+    height: 200%;
+    margin: -50%;
   }
