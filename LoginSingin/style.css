@@ -1,7 +1,7 @@
 body{
     display: flex;
     justify-content: center;
-    background-color: #071030;
+    background-color: #2D328E;
     font-family: Arial;
 }
 #card{
@@ -42,19 +42,19 @@ body{
     margin: auto;
 }
 .butn-log{
-    background-color: #F5A521;
-    border: solid 1px #F5A521;
+    background-color: #F2AE4B;
+    border: solid 1px #F2AE4B;
     color: #f2f2f2;
     width: 50%;
 }
 .butn-sing{
-    background-color: #2652FF;
-    border: solid 1px #2652FF;
+    background-color: #65B3C7;
+    border: solid 1px #65B3C7;
     color: #f2f2f2;
     width: 70%;
 }
 #msg-log{
-    background-color: #2652FF;
+    background-color: #65B3C7;
     width: 50%;
     height: 100%;
     justify-content: center;
@@ -105,15 +105,15 @@ body{
     padding-left: 1vw;
 }
 .input-log{
-    border: #F5A521 solid 0.15rem;
-    outline:#F5A521;
+    border: #F2AE4B solid 0.15rem;
+    outline:#F2AE4B;
 }
 .input-sing{
-    border: #2652FF solid 0.15rem;
+    border: #65B3C7 solid 0.15rem;
 }
 .text-log{
     text-align: center;
-    color: #F5A521;
+    color: #F2AE4B;
 }
 .text-log h1{
     margin-block-start: 0;
@@ -121,7 +121,7 @@ body{
 }
 .text-sing{
     text-align: center;
-    color: #2652FF;
+    color: #65B3C7;
 }
 .text-sing h1{
     margin-block-start: 0;
@@ -153,14 +153,14 @@ p{
     border-radius: 10vh 0 0 10vh;
 }
 #msg-sing{
-    background: #F5A521;
+    background: #F2AE4B;
     width: 50%;
     height: 100%;
     border-radius: 0 10vh 10vh 0;
 }
 .btn-sing:hover{
     background: #f2f2f2;
-    color: #F5A521;
+    color: #F2AE4B;
 }
 .flip{
   transform: rotateY(180deg);

@@ -1,41 +1,83 @@
+*{
+  font-family: Arial;
+}
+
 body {
-    width: 100vw;
-    height: 100vh;
-  
-    display: flex;
-    justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #2d328e;
+}
+#all-game{
+  width: 70vw;
+  display: flex;
+  justify-content: center;
+
+  margin: 0;
 
   
-    margin: 0;
+}
+
+#game-board {
+  border: 1vmin #4b220c solid;
+  border-radius: 3vh;
+  margin-top: 22vh;
+  /*margin-left: 20vw;*/
+  background-image: url("../Dave-Img/Frame\ 3.png");
+  background-size: cover;
+  background-position: center center;
+  width: 70vmin;
+  height: 70vmin;
+  display: grid;
+  grid-template-rows: repeat(10, auto);
+  grid-template-columns: repeat(10, auto);
+}
+
+#pick-word{
+  position: absolute;
+  margin: 7vh 20vw ;
+
+  background-color: #fff;
+  width: 70vmin;
+  border-radius: 7vh;
+  justify-content: center;
+
   
-    background-color: #2D328E;
-  }
+}
+#pick-word p{
+  color:#2d328e;
+  text-align: center;
+  font-size: 4vh;
+
+}
+.snake {
+  background-color: #c20029;
+}
+
+.food{
+  background-color: #fff;
+  border-radius:100%;
+}
+
+.letra {
+  justify-content: center;
+  display: flex;
+}
+
+
+.letra p{
+  position: absolute;
+  margin-top: -0.01vmin;
+  color: #4b220c;
+  text-align: center;
+  font-size: 6vh;
   
-  #game-board {
-    border: 1vmin #4B220C solid;
-    border-radius: 3vh;
-    margin-left: 3vw;
-    background-image: url('../Dave-Img/Frame\ 3.png');
-    background-size: cover;
-    background-position: center center;
-    width: 70vmin;
-    height: 70vmin;
-    display: grid;
-    grid-template-rows: repeat(10, auto);
-    grid-template-columns: repeat(10, auto);
-  }
-  .snake {
-    background-color: #C20029;
-  }
-  
-  .food {
-    background-color: #d84242;
-  }
-  .snake-head {
-    background-image: url('../Dave-Img/picasion.com_09def0a4733e3d6d4b3a184210e6ce68.gif');
-    background-size: cover;
-    background-position: center center;
-    width: 200%;
-    height: 200%;
-    margin: -50%;
-  }
+}
+
+.snake-head {
+  background-image: url("../Dave-Img/picasion.com_09def0a4733e3d6d4b3a184210e6ce68.gif");
+  background-size: cover;
+  background-position: center center;
+  width: 200%;
+  height: 200%;
+  margin: -50%;
+}

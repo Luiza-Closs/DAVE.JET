@@ -1,38 +1,41 @@
-import { onSnake, expandSnake } from './snake.js'
-import { randomGridPosition } from './grid.js'
+import { onSnake, expandSnake } from "./snake.js";
+import { randomGridPosition } from "./grid.js";
 
-import{letras, indiceAtual, pintarLetra} from './palavra.js'
+import { letras, indiceAtual, pintarLetra } from "./palavra.js";
 
-console.log(letras)
-let food = getRandomFoodPosition()
+console.log(letras);
+let food = getRandomFoodPosition();
 
-const EXPANSION_RATE = 1
+const EXPANSION_RATE = 1;
 
 export function update() {
-    if (onSnake(food)) {
-        expandSnake(EXPANSION_RATE)
-        food = getRandomFoodPosition()
-        pintarLetra(letras)
-    }
+  if (onSnake(food)) {
+    expandSnake(EXPANSION_RATE);
+    food = getRandomFoodPosition();
+    pintarLetra(letras);
+  }
 }
 
 export function draw(gameBoard) {
-    const foodElement = document.createElement('div')
-    const letraElement = document.createTextNode(letras[indiceAtual]);
-    foodElement.appendChild(letraElement)
-    foodElement.style.gridRowStart = food.y
-    foodElement.style.gridColumnStart = food.x
-    foodElement.classList.add('food')
-    gameBoard.appendChild(foodElement)
+  const foodElement = document.createElement("div");
+  const letraElement = document.createElement('div'); // Cria um elemento <p>
+  letraElement.classList.add("letra");
+  const letra = document.createElement("p");
+  letra.textContent =letras[indiceAtual];
+  letraElement.appendChild(letra);  // Atribui o texto desejado ao elemento
+  foodElement.appendChild(letraElement);
+  foodElement.style.gridRowStart = food.y;
+  foodElement.style.gridColumnStart = food.x;
+  foodElement.classList.add("food");
+  gameBoard.appendChild(foodElement);
 }
 
 function getRandomFoodPosition() {
-    let newFoodPosition
+  let newFoodPosition;
 
-    while (newFoodPosition == null || onSnake(newFoodPosition)) {
-        newFoodPosition = randomGridPosition()
-    }
+  while (newFoodPosition == null || onSnake(newFoodPosition)) {
+    newFoodPosition = randomGridPosition();
+  }
 
-    return newFoodPosition
+  return newFoodPosition;
 }
-

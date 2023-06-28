@@ -1,51 +1,55 @@
-import { update as updateSnake, draw as drawSnake, getSnakeHead, snakeIntersection, SNAKE_SPEED } from './snake.js'
+import {
+  update as updateSnake,
+  draw as drawSnake,
+  getSnakeHead,
+  snakeIntersection,
+  SNAKE_SPEED,
+} from "./snake.js";
 
-import { update as updateFood, draw as drawFood, } from './food.js'
+import { update as updateFood, draw as drawFood } from "./food.js";
 
-import { outsideGrid } from './grid.js'
+import { outsideGrid } from "./grid.js";
 
+const gameBoard = document.querySelector("#game-board");
+const pickWord = document.querySelector("#pick-word");
 
-const gameBoard = document.querySelector('#game-board');
-const pickWord = document.querySelector('#pick-word');
+let lastRenderTime = 0;
+let gameOver = false;
 
-let lastRenderTime = 0
-let gameOver = false
-
-requestAnimationFrame(main)
+requestAnimationFrame(main);
 
 function main(currentTime) {
-    if (gameOver) {
-        if (confirm('Você perdeu')) {
-            location = '/cobrinha'
-        }
-        return
+  if (gameOver) {
+    if (confirm("Você perdeu")) {
+      location = "/cobrinha";
     }
+    return;
+  }
 
-    requestAnimationFrame(main)
+  requestAnimationFrame(main);
 
-    const secondsSinceLastRender = (currentTime - lastRenderTime) / 1000
+  const secondsSinceLastRender = (currentTime - lastRenderTime) / 1000;
 
-    if (secondsSinceLastRender < 1 / SNAKE_SPEED) return
+  if (secondsSinceLastRender < 1 / SNAKE_SPEED) return;
 
-    lastRenderTime = currentTime
+  lastRenderTime = currentTime;
 
-    update()
-    draw()
+  update();
+  draw();
 }
 
 function update() {
-    updateSnake()
-    updateFood()
-    checkDeath()
+  updateSnake();
+  updateFood();
+  checkDeath();
 }
 
 function draw() {
-    gameBoard.innerHTML = ''
-    drawSnake(gameBoard)
-    drawFood(gameBoard)
-
+  gameBoard.innerHTML = "";
+  drawSnake(gameBoard);
+  drawFood(gameBoard);
 }
 
 function checkDeath() {
-    gameOver = outsideGrid(getSnakeHead()) || snakeIntersection()
+  gameOver = outsideGrid(getSnakeHead()) || snakeIntersection();
 }
